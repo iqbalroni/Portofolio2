@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.black {
+    background-color: #303030;
+    color: #ffffff;
+    border-radius: 0;
+    transition: all 1s ease-in-out;
+}
+
+.black:hover {
+    background-color: #303030;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.garis {
+    margin: 10px auto;
+    width: 8%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #303030;
+}
+
+.toogle-button {
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    animation: infinite putar 5s ease-in-out;
+}
+
+.menu {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: #303030;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 1.5s ease-in-out;
+}
+
+.menu .toogle-close {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #ffffff;
+    animation: infinite putar 5s ease-in-out;
+    cursor: pointer;
+}
+
+@keyframes putar {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+}
+
+.menu-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-ul li a:focus {
+    text-decoration: line-through;
+}
+
+.title-bold {
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #ffffff;
+    width: 100%;
+    color: #303030;
+}
+
+.sticky {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.home .jumbotron {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    color: #303030;
+}
+
+.home .jumbotron img {
+    width: 180px;
+}
+
+.home .jumbotron .btn {
+    border-radius: 0;
+}
+
+.jumbotron .box-container {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.jumbotron .box {
+    width: 30px;
+    height: 30px;
+    background-color: #bdbdbd;
+}
+
+.about .jumbotron {
+    height: 100vh;
+}
+
+.about .jumbotron .text {
+    display: flex;
+    justify-content: start;
+}
+
+.skil .jumbotron {
+    height: 100vh;
+}
+
+.skil .card {
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.skil .card i {
+    color: #303030;
+    position: relative;
+    font-size: 100px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.skil .card-body h3 {
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    color: #303030;
+}
+
+.skil .card-body p {
+    position: relative;
+    z-index: 2;
+    color: #303030;
+}
+
+.skil .card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: #303030;
+    transition: all 1.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.skil .card:hover::after {
+    height: 100%;
+}
+
+.skil .card:hover i,
+.skil .card:hover .card-body p,
+.skil .card:hover .card-body h3 {
+    color: #ffffff;
+}
+
+.portofolio .jumbotron {
+    height: 150vh;
+}
+
+.portofolio .img {
+    position: relative;
+    z-index: 2;
+    border-radius: 0;
+}
+
+.portofolio .card::after {
+    content: '';
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    background-color: #303030;
+    opacity: 70%;
+    transition: all 1.5s ease-in-out;
+}
+
+.portofolio .card {
+    transition: all 1.5s ease-in-out;
+}
+
+.portofolio .card:hover {
+    transform: scale(1.1);
+    z-index: 4;
+}
+
+.portofolio .card:hover::after {
+    height: 100%;
+}
